@@ -6,7 +6,7 @@
 ### A rest operator is a type of parameter that gets all of the remaining parameters of a function call via an Array. It enables us to handle a variety of inputs as parameters in a function. Because it is used to combine many items, the rest operator is very helpful during array and object destructuring
 
  ### function sum(...numbers) {
-  let total = 0;
+ ### let total = 0;
   for (const num of numbers) {
     total += num;
   }
@@ -15,4 +15,19 @@
 
 const result =console.log (sum(1, 2, 3, 4)); 
 // This returns 10 (1 + 2 + 3 + 4)
+
+
+
+```python
+import foobar
+
+# returns 'words'
+foobar.pluralize('word')
+
+# returns 'geese'
+foobar.pluralize('goose')
+
+# returns 'phenomenon'
+foobar.singularize('phenomena')
+```
   
