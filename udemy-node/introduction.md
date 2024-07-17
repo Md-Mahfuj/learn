@@ -18,4 +18,6 @@ Variables in JavaScript are containers which hold reusable data. In other words,
 ## Store your value in it.
 ## Retrieve and use the stored value from the variable.
 
+### var variableName = "Hello, World!";
+
 
