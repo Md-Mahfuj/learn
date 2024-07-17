@@ -12,10 +12,10 @@ Variables are used to store information to be referenced and manipulated in a co
 
 Variables in JavaScript are containers which hold reusable data. In other words, they are units of storage, like some sort of box into which we can put data.
 
-Here are the following three simple steps to creating a variable:
+# Here are the following three simple steps to creating a variable:
 
-Create a variable with the appropriate name.
-Store your value in it.
-Retrieve and use the stored value from the variable.
+## Create a variable with the appropriate name.
+## Store your value in it.
+## Retrieve and use the stored value from the variable.
 
 
