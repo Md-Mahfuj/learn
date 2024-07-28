@@ -90,7 +90,24 @@ alert(x); // "undefined"
 ### Unassigned variables are initialised by JavaScript with a default value of undefined. JavaScript never sets a value to null. That must be done programmatically.
 
 
+# Objects
+```javascript
+const person = {
+  name: "John",
+  age: 25,
+};
 
+console.log(person); // whole object
+console.log(person.name); // just the name
+
+```
+### Object is the most important data-type and forms the building block for modern JavaScript. We will learn about objects in details in further lectures.
+
+The object type is special. All other types are called “primitive” because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
+
+What I'm going to let you know for now is that objects in their simplest forms are used to group variables.
+
+For example, we can create a variable of name, and age:
 
 
 
