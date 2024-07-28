@@ -35,4 +35,64 @@ const newArray=[...firstArray, 35, 40]
 ```
 
 
+
+##  NULL
+
+### This type has only one value: null.
+### The special null value does not belong to any of the types described above.
+### It forms a separate type of its own which contains only the null value:
+
+```let age = null;```
+
+### null is just a special value which represents “nothing”, “empty” or “value unknown”.
+### The code above states that age is unknown or empty for some reason.
+
+##  UNDEFINED
+
+### A variable that has not been assigned a value is undefined.
+
+### The special value undefined also stands apart. It makes a type of its own, just like null.
+
+### The meaning of undefined is “value is not assigned”.
+
+### If a variable is declared, but not assigned, then its value is undefined by default:
+
+
+```let x;
+
+console.log(x);```
+
+### Technically, it is possiable to assign undefined to any variable:
+
+
+```let x = 123;
+
+x = undefined;
+
+alert(x); // "undefined"```
+
+### But I wouldn't recommend doing that. Normally, we use null to assign an “empty” or “unknown” value to a variable, and we use undefined for checks like seeing if a variable has been assigned.
+
+## UNDEFINED VS NULL
+
+### Many a times we often get confused on whats the difference between UNDEFINED and NULL.
+
+### undefined means a variable has been declared but has not yet been assigned a value. On the other hand, null is an assignment value. It can be assigned to a variable as a representation of no value.
+
+### Also, undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object.
+
+### Unassigned variables are initialised by JavaScript with a default value of undefined. JavaScript never sets a value to null. That must be done programmatically.
+
+
+
+
+
+
+
+
+
+
+
+
+
   
