@@ -21,3 +21,19 @@ Variables in JavaScript are containers which hold reusable data. In other words,
 ### var variableName = "Hello, World!";
 
 
+### We can separate data types of current JavaScript Standard in two groups:
+
+# Primitive Data Types:
+
+### Numbers: 5, 6.5, 7 etc.
+### String: “Hello everyone, I'm glad that you're here!” etc.
+### Boolean: Represent a logical entity and can have two values: true or false.
+### Null: This type has only one value : null.
+### Undefined: A variable that has not been assigned a value is undefined.
+### Symbol: used as an identifier for object properties.
+### Complex Data Types:
+
+###  Object: It is the most important data-type and forms the building blocks for modern JavaScript.
+###  We will learn about these data types in details in further articles.
+
+
