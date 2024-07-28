@@ -107,7 +107,42 @@ The object type is special. All other types are called “primitive” because t
 
 What I'm going to let you know for now is that objects in their simplest forms are used to group variables.
 
-For example, we can create a variable of name, and age:
+### For example, we can create a variable of name, and age:
+
+```javascript
+const name = "John";
+const age = 25;
+
+```
+
+These two variables in the current state are in no way related on to another.
+
+We can create an object called person and put them together:
+
+
+```javascript
+const person = {
+  name: "John",
+  age: 25,
+};
+```
+
+Now we know that both name and age belong to the same entity, the person. That is an object. As you can see, we declare it the same as all other variables and then put curly brackets inside of which goes the data.
+
+The one last thing that we can mention is that we can now extract specific values from that object using the dot notation:
+
+```javascript
+person.name;
+person.age;
+
+```
+
+### There are many other kinds of objects in JavaScript:
+
+Array to store ordered data collections,
+Date to store the information about the date and time,
+Error to store the information about an error.
+…And so on.
 
 
 
