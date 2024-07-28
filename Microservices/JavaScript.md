@@ -42,7 +42,9 @@ const newArray=[...firstArray, 35, 40]
 ### The special null value does not belong to any of the types described above.
 ### It forms a separate type of its own which contains only the null value:
 
-```let age = null;```
+```javascript 
+let age = null;
+```
 
 ### null is just a special value which represents “nothing”, “empty” or “value unknown”.
 ### The code above states that age is unknown or empty for some reason.
@@ -58,18 +60,22 @@ const newArray=[...firstArray, 35, 40]
 ### If a variable is declared, but not assigned, then its value is undefined by default:
 
 
-```let x;
+```javascript
+let x;
 
-console.log(x);```
+console.log(x);
+```
 
 ### Technically, it is possiable to assign undefined to any variable:
 
 
-```let x = 123;
+```javascript
+let x = 123;
 
 x = undefined;
 
-alert(x); // "undefined"```
+alert(x); // "undefined"
+```
 
 ### But I wouldn't recommend doing that. Normally, we use null to assign an “empty” or “unknown” value to a variable, and we use undefined for checks like seeing if a variable has been assigned.
 
