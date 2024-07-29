@@ -159,13 +159,126 @@ let message = "Hello, World!";
 message = 123456;
 
 ```
+# Strict vs Loose Equality
+
+### Equality is a fundamental concept in JavaScript. We say two values are equal when they are the same value. For example:
+
+```javascript
+console.log("This is a string." === "This is a string."); // true
+console.log(2 === 2); // true
+
+```
+
+Note that we use three equal signs to represent this concept of equality in JavaScript.
+
+JavaScript also allows us to test loose equality. It is written using two equal signs. Things may be considered loosely equal even if they refer to different values that look similar, an example would be the following:
+
+```javascript
+console.log(5 == "5"); // true
+```
+
+# Strict equality using ===
+## The strict equality method of comparison is a preferred option to use because it’s behaviour can be easily predicted, which leads to less bugs and unexpected results. The JavaScript interpreter compares the values as well as their types and only returns true when both are the same.
+
+```javascript
+
+console.log(20 === "20"); // false
+```
+
+The code above will print false because even though the values seem to be the same, they are of different types. The first one is of type String and the second is of type Number.
+
+Here's just one short thing that I wanted to show you. If we strictly compare objects, we're never going to get true. Let's test it out:
+
+```javascript
+console.log({} === {}); // false
+// we get false, even though they have the same type and content, weird
+
+// the same thing happens for arrays as they are actually objects under the hood
+console.log([] === []); // false
+```
+
+
+For the sake of simplicity, we're not going to go into too much depth about non-primitive data types like objects and arrays. That is a rather complex topic on it’s own. Because of that, later in the course we have a whole separate section called Value vs Reference. In there we're going to explore the mentioned inconsistencies of the equality operator.
+
+Now let's move on to the loose equality.
+
+# Loose equality
+
+We write loose equality using double equal sign. It uses the same underlying logic as the Strict equality except for a minor, yet huge, difference.
+
+## The loose equality doesn’t compare the data types.
+
+## You should almost never use the loose equality.
+
+Douglas Crockford's in his excellent book called JavaScript: The Good Parts wrote:
+
+JavaScript has two sets of equality operators: === and !==, and their evil twins == and !=.
+
+The good ones work the way you would expect. If the two operands are of the same type and have the same value, then === produces true and !== produces false. The evil twins do the right thing when the operands are of the same type, but if they are of different types, they attempt to change the values. The rules by which they do that are complicated and unmemorable. These are some of the interesting cases:
 
 
 
+```javascript
+"" == "0"; // false
+0 == ""; // true
+0 == "0"; // true
+
+false == "false"; // false
+false == "0"; // true
+
+false == undefined; // false
+false == null; // false
+null == undefined; // true
+```
+
+Using the == operator
+
+```javascript
+  true == 1; // true, because 'true' is converted to 1 and then compared
+  "5" == 5; // true, because the string of "5" is converted to the number 5 and then compared
+```
+
+Using the === operator
+
+```javascript
+ true === 1; // false
+ "5" === 5; // false
+```
+
+```javascript
 
 
+```
+
+That's exactly how it should be. On the other hand:
+
+```javascript
+  5 == "5"; // true
+```
+This isn't and should never be equal. "5" is a string, and should be treated like that. As I mentioned, most of the JavaScript developers completely avoid loose equality and rely only on the strict equality. It is considered a better practice and it causes less bugs. From now one, you're going to see me use only the strict equality.
 
 
+So what's the moral of the story? Always use three equal signs.
+
+```javascript
+console.log("This is a string." === "This is a string."); // true
+console.log(2 === 2); // true
+
+console.log(5 == "5"); // true
+console.log(20 === "20"); // false
+
+"" == "0"; // false
+0 == ""; // true
+0 == "0"; // true
+
+false == "false"; // false
+false == "0"; // true
+
+false == undefined; // false
+false == null; // false
+null == undefined; // true
+
+```
 
 
 
