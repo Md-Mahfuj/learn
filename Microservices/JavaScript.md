@@ -281,6 +281,30 @@ null == undefined; // true
 ```
 
 
+In JavaScript, we also have something known as truthy values and falsy values.
+
+Truthy expressions always evaluate to boolean true and falsy evaluate to boolean false.
+
+Knowledge of truthy and falsy values in JavaScript is a must, if you don't know which values evaluate to truthy and which to falsy, you're going to have a hard time reading other people's code.
+
+Longtime JavaScript developers often toss around the terms "truthy" and "falsy", but for those who are newer to JavaScript these terms can be a bit hard to understand.
+
+When we say that a value is "truthy" in JavaScript, we don't just mean that the value is true. Rather, what we mean is that the value coerces to true when evaluated in a boolean context. Let's look at what that means.
+
+The easiest way to learn truthy and falsy values is to memorise falsy values only. There are only six falsy values, all the other values are truthy.
+
+Let's explore the list of falsy values:
+
+# FALSY
+
+_false
+_0 (zero)
+_"", '', `` (empty strings)
+_null
+_undefined
+_NaN (not a number)
+
+
 
 
 
