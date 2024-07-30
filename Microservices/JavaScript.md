@@ -297,12 +297,12 @@ Let's explore the list of falsy values:
 
 # FALSY
 
-false
-0 (zero)
-"", '', `` (empty strings)
-null
-undefined
-NaN (not a number)
+### false
+### 0 (zero)
+### "", '', `` (empty strings)
+### null
+### undefined
+### NaN (not a number)
 
 
 
