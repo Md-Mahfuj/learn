@@ -304,6 +304,45 @@ Let's explore the list of falsy values:
 ### undefined
 ### NaN (not a number)
 
+note : Empty array ([]) is not falsy
+
+### TRUTHY
+
+### Everything that is not FALSY
+That's a pretty straightforward list. But how can we actually use truthiness? Let's look at an example.
+
+Taking advantage of truthiness can make your code a little bit more concise. We don't need to explicitly check for undefined, "", etc. Instead we can just check whether a value is truthy. However, there some caveats to keep in mind.
+
+# for
+
+### It’s called a for loop because it runs “for” specific number of times. For loops are declared with three optional expressions separated by semicolons: initialization, condition and final-expression. Followed by a statement (usually a block statement).
+
+```javascript
+
+for ([initialization]; [condition]; [final - expression]) {
+  statement;
+}
+
+
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+
+let i = 0; // we have i already declared and assigned
+for (; i < 10; i++) {
+  // no need for "initialization"
+  console.log(i); // 0, 1, 2
+}
+
+// We can actually remove everything, creating an infinite loop:
+
+
+for (;;) {
+  // repeats without limits
+}
+
+```
 
 
 
