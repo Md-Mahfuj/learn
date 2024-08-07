@@ -343,6 +343,37 @@ for (;;) {
 }
 
 ```
+#   Functions Intro
+
+##  So what are functions, and why should we use them? 
+### ans: A JavaScript function is a block of code designed to perform a particular task. Remember that, a block of code designed to perform 
+    a particular task. We will often need to perform a similar task many times in our application.
+### Functions are the main building blocks of the program. They allow the code to be called many times without repetition
+
+
+## Defining functions
+
+A function declaration consists of the function keyword, followed by:
+
+I'm first going to show you an example of a simple function called square:
+
+```javascript
+
+function square(number) {
+  return number * number;
+}
+```
+
+## Calling Functions
+
+Defining a function does not execute it. Defining it simply names the function and specifies what to do when the function is called.
+
+Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows:
+
+
+```javascript
+square(5);
+```
 
 
 
