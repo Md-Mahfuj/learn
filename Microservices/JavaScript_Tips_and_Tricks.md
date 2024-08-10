@@ -130,5 +130,93 @@ console.log(a !== b);
 
 ```
 
+# What is scope and why do we need it?
 
+What is Scope? Why do we need it? And how can it help us write less error-prone code?
+
+Scope simply allows us to know where we have access to our variables. It shows us the accessability of variables, functions, and objects in some particular part of the code.
+
+Why would we want to limit the visibility of variables and not have everything availabile everywhere in our code?
+
+Firstly, it provides us with some level of security to our code.
+
+Secondly, it helps to improve efficiency, track bugs and reduce them. It also solves the problem of naming variables.
+
+## We have three types of scopes:
+
+### 1.Global Scope
+### 2.Local Scope
+### 3.Block Scope (only with let and const)
+
+Variables defined inside a function are in local scope while variables defined outside of a function are in the global scope. Each function when invoked creates a new scope.
+
+There are rules about how scope works, but usually you can search for the closest { and } braces around where you define the variable. That “block” of code is its scope.
+
+All of this might be confusing, until you see some examples. You're going to immediately understand what a scope is. Let's explore it in the code.
+
+```JavaScript
+
+const name = "Adrian";
+
+const logName = () => {
+  console.log(name);
+};
+
+logName();
+
+```
+
+## Advantages of using Global variables
+### You can access the global variable from all the functions or modules in a program
+### It is ideally used for storing "constants" as it helps you keep the consistency.
+### A Global variable is useful when multiple functions are accessing the same data.
+
+## Disadvantages of using Global Variables
+
+###  Too many variables declared as global, then they remain in the memory till program execution is completed. This can cause of Out of  Memory issue.
+###  Data can be modified by any function. Any statement written in the program can change the value of the global variable. This may give unpredictable results in multi-tasking environments.
+###  If global variables are discontinued due to code refactoring, you will need to change all the modules where they are called.
+
+
+# Local Scope
+
+### Variables defined inside a function are in the local scope.
+```JavaScript
+
+// Global Scope
+
+const someFunction = () => {
+  // Local Scope #1
+
+  const anotherFunction = () => {
+    // Local Scope #2
+  };
+};
+
+```
+
+## Advantages of using Local Variables
+###  The use of local variables offer a guarantee that the values of variables will remain intact while the task is running
+### You can give local variables the same name in different functions because they are only recognized by the function they are declared in.
+### Local variables are deleted as soon as any function is over and release the memory space which it occupies.
+## Disadvantages of using Local Variables
+### They have a very limited scope.
+
+```JavaScript
+if (true) {
+  // this 'if' conditional block doesn't create a scope
+
+  // name is in the global scope because of the 'var' keyword
+  var name = "Adrian";
+  // likes is in the local scope because of the 'let' keyword
+  let likes = "Coding";
+  // skills is in the local scope because of the 'const' keyword
+  const skills = "JavaScript and PHP";
+}
+
+console.log(name); // logs 'Adrian'
+console.log(likes); // Uncaught ReferenceError: likes is not defined
+console.log(skills); // Uncaught ReferenceError: skills is not defined
+
+```
 
