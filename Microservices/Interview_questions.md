@@ -8,4 +8,10 @@ var num =10;
     console.log(num);
 })();
 
+// Output is
+// undefined
+// 20
+
 ```
+
+
