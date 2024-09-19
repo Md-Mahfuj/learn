@@ -95,3 +95,42 @@ function a(){
 a();
 
 ```
+
+// guess the output 
+```javascript
+(function immediateA(a){
+    return (function immediateB(b){
+        console.log(a); // what is logged?
+    })(1);
+})(0);
+
+```
+
+## Hard level JavaScript questions on Hoisting
+
+
+```javascript
+// what you see normally
+console.log(x);
+var x=2;
+
+// Hoisting ( what js does behind the scenes)
+var x; // Declaration is hoistedto to the top 
+console.log(x)  // Since there's no assignment yet, x is undefined
+x=2;// Initialization happens here 
+
+```
+```javascript
+// guess the output
+
+y=3;
+console.log(y);
+var y;
+
+// behind the scenes 
+
+var y; //Declaration is hoisted to th top 
+y=3; // Initialization happens here 
+console.log(y);// y has been  initialized to 3 , so it print 3
+```
+
