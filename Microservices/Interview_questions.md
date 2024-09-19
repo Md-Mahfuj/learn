@@ -20,7 +20,9 @@ var num =10;
 // arguments are passed in this manner (multiply(2)(3)(4))
 
 function multiply(a){
+    //Closures
     return function(b){
+       // Closures
         return function (c){
             return a*b*c;
        }
