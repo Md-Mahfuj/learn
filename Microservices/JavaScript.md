@@ -429,3 +429,186 @@ sayHi("Joe"); // Joe
 ### Parameters are used when defining a function, they are the names created in the function definition. Parameter is like a variable that is only meaningful inside of this function. It won't be accessible outside of the function.
 
 ### Arguments are real values passed to the function when making a function call.
+
+
+## What is synchronous Javascript?
+
+### Synchronous Javascript is one in which the code is executed line by line and their tasks are completed instantly, i.e. there is no time delay in the completion of the tasks for those lines of code.
+
+```javascript
+const functionOne = () => {
+    console.log('Function One');
+
+    functionTwo();
+
+    console.log('Function One, Part 2')
+}
+
+const functionTwo = () => {
+    console.log('Function Two');
+}
+
+functionOne();
+
+// Function One
+// Function Two
+// Functino One, Part 2
+
+```
+
+### Let's change the functions
+
+### It's time to give you a taste of asynchronous javascript! So, let's change the functions we wrote:
+
+## synchronous Javascript is one in which some lines of code take time to run. These tasks are run in the background while the Javascript engine keeps executing other lines of code. When the result of the asynchronous tasks gets available, it is then used in the program.
+
+
+
+
+```javascript
+const functionOne = () => {
+    console.log('Function One'); // 1
+
+    functionTwo();
+
+    console.log('Function One, Part 2') // 2
+}
+
+const functionTwo = () => {
+    setTimeout(() => console.log('Function Two'), 2000); // 3
+}
+
+functionOne();
+
+// Function One
+// Functino One, Part 2
+// (after two second delay)
+// Function Two
+
+```
+
+# Promises
+
+```javascript
+const fetchUser = (username) => {
+	return new Promise((resolve, reject) => {
+			setTimeout(() => {
+			console.log('Now we have the user');
+
+			resolve(username);
+		}, 2000);
+	})
+}
+
+const fetchUserPhotos = (username) => {
+	return new Promise((resolve, reject) => {
+			setTimeout(() => {
+		console.log('Now we have the photos');
+
+			resolve(['photo1', 'photo2']);
+		}, 2000);
+	})
+}
+
+const fetchPhotoDetails = (photo) => {
+return new Promise((resolve, reject) => {
+			setTimeout(() => {
+		console.log('Now we have the photo details');
+
+		resolve('details...');
+		}, 2000);
+	})
+}
+
+
+fetchUser('Michael')
+	.then((user) => fetchUserPhotos(user))
+	.then((photos) => fetchPhotoDetails(photos[0]));
+	.then((detail) => console.log(detail));
+
+```
+
+## Async/Await
+
+```javascript
+const fetchUser = (username) => {
+	return new Promise((resolve, reject) => {
+			setTimeout(() => {
+			console.log('Now we have the user');
+
+			resolve(username);
+		}, 2000);
+	})
+}
+
+const fetchUserPhotos = (username) => {
+	return new Promise((resolve, reject) => {
+			setTimeout(() => {
+		console.log('Now we have the photos');
+
+			resolve(['photo1', 'photo2']);
+		}, 2000);
+	})
+}
+
+const fetchPhotoDetails = (photo) => {
+return new Promise((resolve, reject) => {
+			setTimeout(() => {
+		console.log('Now we have the photo details');
+
+		resolve('details...');
+		}, 2000);
+	})
+}
+
+const displayData = async () => {
+	const user = await fetchUser('Adrian')
+	const photos = await fetchUserPhotos(user);
+	const detail = await fetchPhotoDetails(photos[0]);
+
+	console.log(detail);
+}
+
+displayData();
+
+```
+
+### Module Imports and Exports
+
+
+```javascript
+// This is often used in React.
+
+// dogs.js
+const dogs = [ 'Bear', 'Fluffy', 'Doggo' ];
+
+const woof = (dogName) => console.log(`${dogName} says Woof!`);
+
+const number = 5;
+
+export dogs, woof, number;
+
+// test.js
+const onlyOneThing = 'test';
+
+export default onlyOneThing;
+
+// index.js
+import { dogs, woof, number } from './dogs.js';
+import onlyOneThing from './test.js';
+
+console.log(dogs);
+console.log(number);
+
+woof(dogs[0]);
+
+console.log(onlyOneThing);
+
+```
+
+
+
+
+
+
+
