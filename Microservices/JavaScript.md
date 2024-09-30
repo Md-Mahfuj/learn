@@ -460,7 +460,7 @@ functionOne();
 
 ### It's time to give you a taste of asynchronous javascript! So, let's change the functions we wrote:
 
-## synchronous Javascript is one in which some lines of code take time to run. These tasks are run in the background while the Javascript engine keeps executing other lines of code. When the result of the asynchronous tasks gets available, it is then used in the program.
+## asynchronous Javascript is one in which some lines of code take time to run. These tasks are run in the background while the Javascript engine keeps executing other lines of code. When the result of the asynchronous tasks gets available, it is then used in the program.
 
 
 
