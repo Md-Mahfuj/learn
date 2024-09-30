@@ -9,7 +9,7 @@ console.log(saveArray.join(" "));
 
 ```
 
-```
+```javascript
 
 //  How to check if an object is an array or not ? 
 
